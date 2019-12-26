@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Convert Biner</title>
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-lg-8 align-self-center">
+				<div class="main">
+          <h2 class="text-center my-0">Convert Biner</h2>
+          <p class="text-center my-0">by Irsyad Abdul</p>
+					<div class="form-group">
+						<label for="angka">Angka</label>
+						<input type="text" class="form-control" id="angka" placeholder="Masukkan angka/bilangan" onkeypress="return isValid(event)" onkeyup="isExist(this)">
+          </div>
+          <div class="row">
+            <div class="col-lg">
+              <div class="form-group">
+                <label for="from">From</label>
+                <select class="form-control" id="from">
+                  <option value="2">Biner</option>
+                  <option value="10" selected>Decimal</option>
+                  <option value="16">Hexa</option>
+                  <option value="8">Okta</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-lg">
+              <div class="form-group">
+                <label for="to">To</label>
+                <select class="form-control" id="to">
+                  <option value="2" selected>Biner</option>
+                  <option value="10">Decimal</option>
+                  <option value="16">Hexa</option>
+                  <option value="8">Okta</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <button id="btnConvert" class="btn btn-success" onclick="convert()" disabled>Convert</button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <h3 class="text-center">Result</h3>
+              <h2 id="hasil" class="text-center">?</h2>
+            </div>
+          </div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="./js/jquery-3.3.1.min.js"></script>
+	<script src="./js/bootstrap.min.js"></script>
+	<script src="./js/biner.js"></script>
+	<script src="./js/main.js"></script>
+</body>
+</html>
